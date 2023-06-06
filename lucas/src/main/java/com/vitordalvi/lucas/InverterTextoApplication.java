@@ -21,8 +21,8 @@ public class InverterTextoApplication {
 	@PostMapping(value = "/inverter", consumes = MediaType.APPLICATION_JSON_VALUE,
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> reverseText(@RequestBody ReverseRequest request) {
-		if (request.text().length() > 150) {
-			String errorMessage = "A mensagem passou do limite de 150 caracteres.";
+			if (request.text().length() > 150) {
+				String errorMessage = "A mensagem passou do limite de 150 caracteres.";
 			return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
